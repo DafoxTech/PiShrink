@@ -321,13 +321,13 @@ if [[ $prep == true ]]; then
   umount "$mountdir"
 fi
 
-info "AdoPiSoft: Removing logs, activation cache, and device ids"
+info "Fox Eloading: Removing logs, activation cache, and device ids"
 mountdir=$(mktemp -d)
 mount "$loopback" "$mountdir"
 rm -rvf $mountdir/etc/devact
 rm -rvf $mountdir/etc/device-uid
-rm -rvf $mountdir/opt/adopisoft/*.log
-rm -rvf $mountdir/opt/adopisoft/captive-portal/dist/*
+rm -rvf $mountdir/opt/fox-eloading/*.log
+rm -rvf $mountdir/opt/fox-eloading/captive-portal/dist/*
 umount "$mountdir"
 
 #Make sure filesystem is ok
